@@ -23,8 +23,9 @@ def which_ffmpeg() -> str:
     Returns:
         str -- path to the library
     '''
-    result = subprocess.run(['which', 'ffmpeg'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    ffmpeg_path = result.stdout.decode('utf-8').replace('\n', '')
+    #result = subprocess.run(['which', 'ffmpeg'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    #ffmpeg_path = result.stdout.decode('utf-8').replace('\n', '')
+    ffmpeg_path='D:\\Software\\Anaconda\\envs\\diff_foley\\Library\\bin\\ffmpeg.exe'
     return ffmpeg_path
 
 

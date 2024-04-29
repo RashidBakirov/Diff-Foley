@@ -5,17 +5,25 @@ import warnings
 
 import torch
 import torch.nn as nn
-from mmcv.cnn import ConvModule, kaiming_init
-from mmcv.runner import _load_checkpoint, load_checkpoint
-from mmcv.utils import print_log
+#from mmcv.cnn import ConvModule, kaiming_init
+from mmcv.cnn import ConvModule
+from mmengine.model import constant_init, kaiming_init
+#from mmcv.runner import _load_checkpoint, load_checkpoint
+from mmengine.runner import load_checkpoint
+
+#from mmcv.utils import print_log
+from mmengine.logging import print_log
 
 import warnings
 import torch.nn as nn
 import torch.utils.checkpoint as cp
-from mmcv.cnn import (ConvModule, NonLocal3d, build_activation_layer,
-                      constant_init, kaiming_init)
-from mmcv.runner import _load_checkpoint, load_checkpoint
-from mmcv.utils import _BatchNorm
+#from mmcv.cnn import (ConvModule, NonLocal3d, build_activation_layer, constant_init, kaiming_init)
+from mmcv.cnn import (ConvModule, NonLocal3d, build_activation_layer)
+#from mmcv.runner import _load_checkpoint, load_checkpoint
+from mmengine.runner import load_checkpoint
+
+from mmengine.utils.dl_utils.parrots_wrapper import _BatchNorm
+#from mmcv.utils import _BatchNorm
 from torch.nn.modules.utils import _ntuple, _triple
 
 from itertools import repeat
